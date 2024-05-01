@@ -1,0 +1,147 @@
+
+
+header {
+    width: 100;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: aqua;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+button {
+    padding: .1rem .75rem;;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.aside__button {
+    margin-top: 1rem;
+}
+
+.options {
+    align-items: start;
+    justify-content: space-between;
+    display: flex;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+main {
+    padding: 1.5rem max((100% - 71.25rem) / 2, 1.5rem);
+}
+
+.feed {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));;
+}
+
+.card {
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1.1 / 1;
+    object-fit: cover;
+}
+
+/* Loader */
+.loader__container, .error__container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    width: 70px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loader::before {
+    border-color: aqua #0000;
+    animation: inherit; 
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+  .loader::after {
+    margin: 8px;
+  }
+  @keyframes l16 { 
+    100%{transform: rotate(1turn)}
+  }
+
+  @media (min-width: 740px) and (max-width: 1024px) {
+    .feed {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hidden {
+        display: block;
+    }
+
+    .options {
+        font-size: 1.2rem;
+        position: static;
+        height: fit-content;
+        width: auto;
+        border-radius: 10px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        padding: 1.5rem max((100% - 71.25rem) / 2, 4rem);
+    }
+
+    .header__button, .options__button {
+        display: none;
+    }
+  }

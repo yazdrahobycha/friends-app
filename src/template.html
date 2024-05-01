@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <header><span class="header__title">FriendsApp</span><button class="header__button"><i
+                    class="fa fa-bars"></i></button></header>
+        <main>
+            <aside class="options hidden">
+                <form action="#" class="options__form" onsubmit="return false">
+                    <h3 class="options__title">Find members</h3>
+                    <label for="nick" class="options__label">
+                        <h4 class="options__filter-caption">Nickname</h4>
+                        <input type="text" id="nick" class="options__input" name="nick" placeholder="arsenyavorskyi228">
+                    </label>
+                    <label for="name" class="options__label">
+                        <h4 class="options__filter-caption">Name</h4>
+                        <input type="text" id="name" class="options__input" name="name" placeholder="Arsen Yavorskyi">
+                    </label>
+                    <label for="gender" class="options__label">
+                        <h4 class="options__filter-caption">Age</h4>
+                        <select id="gender" name="gender" value="female">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="helicopter">Helicopter</option>
+                        </select>
+                    </label>
+                    <h4 class="options__filter-caption">Age</h4>
+                    <label for="agefrom" class="options__label">
+                        from <input type="number" id="agefrom"
+                            class="options__input" name="agefrom"
+                            placeholder="0">
+                    </label>
+                    <label for="ageto" class="options__label">
+                        to <input type="number" id="ageto"
+                            class="options__input" name="ageto"
+                            placeholder="0">
+                    </label>
+                    <label for="email" class="options__label">
+                        <h4 class="options__filter-caption">Email</h4>
+                        <input type="text" id="email" class="options__input" name="email" placeholder="ars.yar228@gmail.com">
+                    </label>
+                    <label for="city" class="options__label">
+                        <h4 class="options__filter-caption">City</h4>
+                        <input type="text" id="city" class="options__input" name="city" placeholder="Drohobych">
+                    </label>
+                    <h3 class="options__title">Sort members</h3>
+                    <h4 class="options__filter-caption">Nick</h4>
+                    <label for="a-first" class="options__label">
+                        <input type="radio" id="a-first" class="options__radio" name="sort" value="az" checked> A-Z
+                    </label>
+                    <label for="z-first" class="options__label">
+                        <input type="radio" id="z-first" class="options-radio" name="sort" value="za"> Z-A
+                    </label>
+                    <h4 class="options__filter-caption">Name</h4>
+                    <label for="name-a-first" class="options__label">
+                        <input type="radio" id="name-a-first" class="options__radio" name="sort" value="az-name"> A-Z
+                    </label>
+                    <label for="name-z-first" class="options__label">
+                        <input type="radio" id="name-z-first" class="options-radio" name="sort" value="za-name"> Z-A
+                    </label>
+                    <h4 class="options__filter-caption">Age</h4>
+                    <label for="young-first" class="options__label">
+                        <input type="radio" id="young-first" class="options__radio" name="sort" value="young-first"> Young
+                    </label>
+                    <label for="old-first" class="options__label">
+                        <input type="radio" id="old-first" class="options-radio" name="sort" value="old-first"> Old
+                    </label>
+                    <h4 class="options__filter-caption">Registration Date</h4>
+                    <label for="newfag" class="options__label">
+                        <input type="radio" id="newfag" class="options__radio" name="sort" value="newfag"> NewFag
+                    </label>
+                    <label for="oldfag" class="options__label">
+                        <input type="radio" id="oldfag" class="options-radio" name="sort" value="oldfag"> OldFag
+                    </label>
+                </form>
+                <button class="options__button"><i class="fa fa-bars"></i></button>
+            </aside>
+            <div class="feed"></div>
+        </main>
+    </div>
+</body>
+
+</html>

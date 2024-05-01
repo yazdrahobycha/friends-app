@@ -3,6 +3,7 @@ const path = require('path')
 const hmtlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    homepage: 'https://github.com/yazdrahobycha/friends-app',
     mode: 'production',
     entry: {
         filename: path.resolve(__dirname, 'src/index.js')

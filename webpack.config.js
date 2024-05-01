@@ -3,7 +3,6 @@ const path = require('path')
 const hmtlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    homepage: 'https://friends-yazdrahobycha.netlify.app/',
     mode: 'production',
     entry: {
         filename: path.resolve(__dirname, 'src/index.js')
